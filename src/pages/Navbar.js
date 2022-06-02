@@ -21,7 +21,7 @@ function Navbar ()
                 <Link className="nav-link" to="/students">Student</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/add-student">Add Student</Link>
+                <Link className="nav-link" to="/add-students">Add Student</Link>
               </li>
             </ul>
           </div>
