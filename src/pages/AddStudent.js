@@ -1,15 +1,3 @@
-// import React from 'react';
-
-// const AddStudent = () => {
-//     return (
-//         <div>
-//             AddStudent
-//         </div>
-//     );
-// };
-
-// export default AddStudent;
-
 import React, {useState} from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import axios from 'axios';
