@@ -22,7 +22,21 @@ function ViewStudent() {
     const deleteStudent = (e, id) => {
         e.preventDefault();
         
-        console.log(id,e);
+        const thisClicked = e.currentTarget;
+        thisClicked.innerText = "Deleting";
+
+        axios.delete(`/api/delete-student/${id}`).then(res=>{
+            if(res.data.status === 200)
+            {
+                swal("Deleted!",res.data.message,"success");
+                thisClicked.closest("tr").remove();
+            }
+            else if(res.data.status === 404)
+            {
+                swal("Error",res.data.message,"error");
+                thisClicked.innerText = "Delete";
+            }
+        });
     }
 
     if(loading)
